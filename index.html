@@ -4,57 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Website</title>
-
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f4f4f4;
       text-align: center;
       scroll-behavior: smooth;
     }
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      padding: 20px;
-    }
-
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    /* SECTIONS */
-    section {
+    section {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -66,31 +25,27 @@
       opacity: 0.4;
       transform: scale(0.95);
     }
-
     section.active {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1);
     }
 
-    h2 { font-size: 2rem; }
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
 
     p {
-      max-width: 600px;
-      font-size: 1.1rem;
-    }
-
-    /* TEAM IMAGE */
-    .team-img {
-      width: 100%;
       max-width: 600px;
-      border-radius: 10px;
-      margin-top: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
     }
 
 
     .btn {
-      padding: 12px 24px;
+      padding: 10px 20px;
       background: #0078D4;
       color: white;
       border: none;
@@ -100,6 +55,7 @@
       display: inline-block;
     }
 
+
     .btn-outline {
       border: 1px solid #333;
       background: transparent;
@@ -108,17 +64,20 @@
       border-radius: 6px;
     }
 
+
     .services {
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
     }
 
+
     @media (min-width: 768px) {
       .services {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
 
     .card {
       background: white;
@@ -127,6 +86,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
+
     .socials {
       display: flex;
       gap: 12px;
@@ -134,44 +94,44 @@
   </style>
 </head>
 
+
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>We Help Businesses Grow 🚀</h1>
-      <p>We create modern, high-converting websites that turn visitors into customers.</p>
-      <a href="#" class="btn">Book a Call</a>
-    </div>
-  </div>
+
+  <!-- VALUE PROPOSITION -->
+  <section>
+    <h1>We Help Businesses Grow 🚀</h1>
+    <p>We create modern, high-converting websites that turn visitors into customers.</p>
+    
+    <!-- Replace link below with your booking link -->
+    https://calendly.com/YOUR-LINK
+  </section>
+
 
   <!-- ABOUT -->
   <section>
     <h2>About Us</h2>
     <p>We are a passionate team dedicated to building websites that not only look amazing but deliver real business results.</p>
-
-
-    <!-- TEAM IMAGE (replace with your own) -->
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Our Team" class="team-img">
   </section>
 
+
   <!-- SERVICES -->
-  <section class="services-section">
+  <section>
     <h2>Services</h2>
     <div class="services">
       <div class="card">Website Design</div>
       <div class="card">SEO Optimization</div>
       <div class="card">Brand Strategy</div>
-    </div>
-  </section>
+    </div>
+  </section>
 
-  <!-- SOCIAL -->
+  <!-- SOCIAL LINKS -->
   <section>
     <h2>Connect With Us</h2>
     <div class="socials">
       <a href="https://instagram.com/YOUR-PAGE" class="btn-outline">Instagram</a>
-      <a href="https://linkedin.com/YOUR-PAGE" class="btn-outline">LinkedIn</a>
-      <a href="https://yourwebsite.com" class="btn-outline">Website</a>
+      <a href="https://linkedin.com/YOUR-PAGE" class="btn-outline">LinkedIn</a>
+      <a href="https://yourwebsite.com" class="btn-outline">Website</a>
     </div>
   </section>
 
@@ -190,4 +150,3 @@
   </script>
 
 </body>
-
