@@ -42,7 +42,6 @@
       padding: 20px;
     }
 
-
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 10px;
@@ -89,7 +88,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-
     .btn {
       padding: 12px 24px;
       background: #0078D4;
@@ -107,7 +105,20 @@
       color: #333;
       padding: 10px;
       border-radius: 6px;
+      transition: all 0.3s ease;
     }
+
+    .btn-outline:hover {
+      background: #333;
+      color: white;
+    }
+
+
+    /* SERVICES */
+    .services-section {
+      background: linear-gradient(135deg, #d4f5d0, #a8e6a3);
+    }
+
 
     .services {
       display: grid;
@@ -126,9 +137,30 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
-    .socials {
+    /* HOVER EFFECT */
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+
+    .footer-links {
       display: flex;
       gap: 12px;
     }
@@ -151,8 +183,6 @@
     <h2>About Us</h2>
     <p>We are a passionate team dedicated to building websites that not only look amazing but deliver real business results.</p>
 
-
-    <!-- TEAM IMAGE (replace with your own) -->
     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Our Team" class="team-img">
   </section>
 
@@ -166,15 +196,15 @@
     </div>
   </section>
 
-  <!-- SOCIAL -->
-  <section>
-    <h2>Connect With Us</h2>
-    <div class="socials">
-      <a href="https://instagram.com/YOUR-PAGE" class="btn-outline">Instagram</a>
+  <!-- FOOTER -->
+  <footer>
+    <h3>Connect With Us</h3>
+    <div class="footer-links">
+      <a https://instagram.com/YOUR-PAGE</a>
       <a href="https://linkedin.com/YOUR-PAGE" class="btn-outline">LinkedIn</a>
       <a href="https://yourwebsite.com" class="btn-outline">Website</a>
     </div>
-  </section>
+  </footer>
 
   <script>
     const sections = document.querySelectorAll("section");
