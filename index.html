@@ -126,12 +126,30 @@
       }
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+	.card {
+	  background: white;
+	  padding: 20px;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+	  transition: all 0.3s ease;
+	  cursor: pointer;
+	  overflow: hidden;
+	}
+
+	/* Hidden content */
+	.card-hidden {
+	  max-height: 0;
+	  overflow: hidden;
+	  opacity: 0;
+	  transition: all 0.4s ease;
+	}
+
+	/* Expanded state */
+	.card.active .card-hidden {
+	  max-height: 200px;
+	  opacity: 1;
+	  margin-top: 10px;
+	}
 
     
     /* FOOTER */
@@ -165,28 +183,41 @@
   <!-- ABOUT -->
   <section>
     <h2>About Us</h2>
-    <p>We are a passionate team dedicated to building websites that not only look amazing but deliver real business results.</p>
+    <p>Hello and welcome to our page! As previous business owners of an establishment, we understand why you may be here. Bookkeeping probably doesn’t sound complicated, but it does take time, time that could have been invested in growing your business, doing what you love or being with your family and friends. In our case, life happened, and we simply didn’t have time to keep up with bookkeeping as we would have liked. At that point in our lives, we were a family of 3 and expecting our second daughter! It was exciting! Starting a business, building a legacy for our girls. Then our princess was born. She was born with multiple medical complexities and, as a result, spent 136 days in the NICU. Our medically complex baby was going to need a caregiver 24/7, so we let go of the business to focus on her and our family. 4 months after letting go of the business, tax season approaches and only then did we begin to do our bookkeeping. As we were completing each month, we discovered we could have made better choices. That there were opportunities to save money and to make more money. That inspired us to create this business. We understand you have other priorities and that you want your business to succeed. So do we! Give us the opportunity to help you.<br>Oh, and by the way, my name is Javier, and my wife, Daniela, and I run this business. We have 3 beautiful daughters and 2 dogs. You can see a recent picture of us below. Our first daughter is 4, but acts like a mini teenager, our second is an angel, and our third is 1 and developing a bossy attitude! Wish us luck! I would love to know about you too, what’s your story?</p>
 
     <!-- TEAM IMAGE -->
     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Our Team" class="team-img">
   </section>
 
-  <!-- SERVICES -->
-  <section class="services-section">
-    <h2>Services</h2>
-    <div class="services">
-	  <div class="card">Monthly Bookkeeping</div>
-      <div class="card">Profit and Loss</div>
-      <div class="card">Balance Sheet</div>
-      <div class="card">Bank Reconciliation</div>
-	  <div class="card">Accounts Payable</div>
-	  <div class="card">Accounts Receivable</div>
-	  <div class="card">Quickbooks Setup</div>
-	  <div class="card">Clean Up</div>
-	  <div class="card">Catch Up</div>
-		
+<!-- SERVICES -->
+<section>
+  <h2>Services</h2>
+
+  <div class="services">
+
+    <div class="card" onclick="toggleCard(this)">
+      <h3>Website Design</h3>
+      <p class="card-hidden">
+        Custom, modern websites designed to convert visitors into customers and reflect your brand identity.
+      </p>
     </div>
-  </section>
+
+    <div class="card" onclick="toggleCard(this)">
+      <h3>SEO Optimization</h3>
+      <p class="card-hidden">
+        Improve your visibility on Google and attract the right audience with proven SEO strategies.
+      </p>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+      <h3>Brand Strategy</h3>
+      <p class="card-hidden">
+        Build a strong, recognizable brand that connects with your audience and drives growth.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- FOOTER -->
@@ -215,6 +246,13 @@
     }, { threshold: 0.3 });
 
     sections.forEach(section => observer.observe(section));
+	  function toggleCard(card) {
+  document.querySelectorAll(".card").forEach(c => {
+    if (c !== card) c.classList.remove("active");
+  });
+  card.classList.toggle("active");
+}
+
   </script>
 
 </body>
