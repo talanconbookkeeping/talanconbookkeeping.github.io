@@ -71,7 +71,26 @@
 	  border-radius: 50%;
 	  object-fit: cover;
 	  border: 2px solid white;
+		
+		/* Animation starts - before only had } here to finish */
+	  animation: floatFade 10s ease-in-out infinite;
 	}
+
+	/* Keyframe animation */
+	@keyframes floatFade {
+ 	 0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+ 	 50% {
+  	  opacity: 1;
+ 	   transform: translateY(0px);
+ 	 }
+ 	 100% {
+ 	   opacity: 1;
+ 	   transform: translateY(10px);
+	  }
+	} /*Up to here for animation*/
 
     /* SECTIONS */
     section {
